@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gerenciador IOT</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename="css/bootstrap.min.css") }}">
     <style>
       body {
         background-color: #f3efef;
@@ -31,7 +32,7 @@
             <tr>
               <th scope="row">Umidade </tr>
                 <td> 
-                  <h5>Valor?</h5>
+                  <h5>{{ umid }}</h5>
                 </td>
                 <td>
                   <h5>{{led_vermelho}}</h5>
@@ -47,7 +48,7 @@
             <tr>
               <th scope="row">Temperatura </tr>
                 <td> 
-                  <h5>Valor?</h5>
+                  <h5>{{ temp }}</h5>
                 </td>
                 <td>
                   <h5>{{led_verde}}</h5>
@@ -60,6 +61,17 @@
                   {% endif %}
                 </td>
             </tr>
+            <tr>
+              <th scope="row">Ocupação da Lixeira ----> </th>
+              <td>
+                <h4> {{ ocup_lixeira }}
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">  
+                <a class="btn btn-outline-danger" href="/" role="button">Atualizar</a>
+              </th>
+            <tr>
         </table>
     </div>
   </body>
